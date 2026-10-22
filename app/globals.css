@@ -137,48 +137,15 @@ input:focus {
   box-shadow: 0 0 0 3px var(--gold-soft);
 }
 
-fieldset {
-  border: 0;
-  padding: 0;
-  margin: 4px 0 20px;
-}
-
-legend {
-  margin-bottom: 8px;
-}
-
-.events {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.event-option {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-height: 52px;
-  padding: 0 14px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  transition:
-    border-color 0.15s,
-    background 0.15s;
-}
-
-.event-option input {
-  accent-color: var(--navy);
-  width: 18px;
-  height: 18px;
-  margin: 0;
-}
-
-.event-option.selected {
-  border-color: var(--navy);
+.event-badge {
+  display: inline-block;
+  margin: 0 0 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
   background: var(--gold-soft);
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .submit {
@@ -196,6 +163,12 @@ legend {
 .submit:disabled {
   opacity: 0.6;
   cursor: default;
+}
+
+.submit.unavailable {
+  background: var(--border);
+  color: var(--muted);
+  opacity: 1;
 }
 
 .error {
@@ -292,16 +265,6 @@ legend {
   color: var(--muted);
 }
 
-.link-button {
-  margin-top: 18px;
-  background: none;
-  border: 0;
-  color: var(--muted);
-  font-size: 14px;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 @keyframes pop {
   from {
     transform: scale(0.4);
@@ -335,4 +298,20 @@ legend {
     animation: none;
     stroke-dashoffset: 0;
   }
+}
+
+.offer-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-button {
+  background: none;
+  border: 0;
+  color: var(--muted);
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
 }

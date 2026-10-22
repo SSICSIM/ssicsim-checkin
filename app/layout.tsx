@@ -17,7 +17,15 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <main className="page">
+          <div className="brand">
+            <img src="/GoldLogo.png" alt="SSICSIM" />
+            <span>Event Check-in</span>
+          </div>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
